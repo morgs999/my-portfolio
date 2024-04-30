@@ -8,6 +8,7 @@ function App() {
     return (
         <>
             <Nav />
+            <div className="parallax"></div>
             <Header />
             <main>
                 <div className="page-view">
