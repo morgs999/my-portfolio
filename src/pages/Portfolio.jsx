@@ -7,37 +7,37 @@ export default function Portfolio() {
             name: "What's Up Doc",
             deploy: "",
             repo: "",
-            photo: "../public/gifs/whatsupdoc.gif",
+            photo: "gifs/whatsupdoc.gif",
         },
         {
             name: "Anyways, Here's Wonderwall",
             deploy: "",
             repo: "",
-            photo: "../public/gifs/anywayhereswonderwall.gif",
+            photo: "gifs/anywayhereswonderwall.gif",
         },
         {
             name: "Leftover Lover",
             deploy: "",
             repo: "",
-            photo: "../public/gifs/leftoverlover.gif",
+            photo: "gifs/leftoverlover.gif",
         },
         {
             name: "Stock Portfolio Generator",
             deploy: "",
             repo: "",
-            photo: "../public/gifs/stockportfolio.gif",
+            photo: "gifs/stockportfolio.gif",
         },
         {
             name: "Tech Blog",
             deploy: "",
             repo: "",
-            photo: "../public/gifs/techblog.gif",
+            photo: "gifs/techblog.gif",
         },
         {
             name: "Weather Dashboard",
             deploy: "",
             repo: "",
-            photo: "../public/gifs/weatherdashboard.gif",
+            photo: "gifs/weatherdashboard.gif",
         },
 
     ];

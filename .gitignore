@@ -1,3 +1,4 @@
 *node_modules
 *scratch.txt
 dist/
+*.DS_Store

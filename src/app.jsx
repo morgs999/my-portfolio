@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Nav from './components/NavBar'
+import NavBarr from './components/NavBar'
 import Header from './components/Header';
 import Footer from "./components/Footer";
 
@@ -7,8 +7,8 @@ function App() {
 
     return (
         <>
-            <Nav />
-            <div className="parallax"></div>
+            <NavBarr />
+            {/* <div className="parallax"></div> */}
             <Header />
             <main>
                 <div className="page-view">
