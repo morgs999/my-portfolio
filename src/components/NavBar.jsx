@@ -1,19 +1,20 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
-import {Navbar, Nav} from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
+import { IoHomeSharp } from "react-icons/io5";
 
-export default function NavBarr() {
+export default function NavBar() {
   const currentPage = useLocation().pathname;
   return (
     // <div className='container'>
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container className="p-3">
-        <Row >
-          <Navbar.brand>
-            <Link to="/"
-              className={currentPage === '/' ? 'nav-link active' : 'nav-link'}>About</Link>
-          </Navbar.brand>
+    <Navbar className='bg-dark data-bs-theme-dark'>
+      <Container className="">
+        <Row className='d-flex flex-row justify-content-end'>
+          <Col>
+            <Link to="/"><IoHomeSharp /></Link>
+          </Col>
           <Col>
             <Link to="/portfolio">Portfolio</Link>
           </Col>
@@ -24,7 +25,7 @@ export default function NavBarr() {
             <Link to="/contact">Contact</Link>
           </Col>
           <Col>
-            <Image src="../../pngs/headshot.jpg" id="headshot" roundedCircle />
+            <Image src="../../pngs/headshot.jpg" className='rounded-circle w-75 h-75' />
           </Col>
         </Row>
       </Container>
