@@ -28,6 +28,7 @@ export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1, mb: 20 }}>
       <AppBar className='p-4' >
+        <Typography>Morgan Clarke</Typography>
         <Grid container justifyContent="flex-end">
           <Toolbar>
 
@@ -40,6 +41,7 @@ export default function NavBar() {
               href='/'
             >
               <HomeOutlinedIcon />
+              <Typography>About Me</Typography>
             </IconButton>
 
             <IconButton
@@ -51,6 +53,7 @@ export default function NavBar() {
               href='/portfolio'
             >
               <DesktopMacOutlinedIcon />
+              <Typography>Portfolio</Typography>
             </IconButton>
 
             <IconButton
@@ -62,6 +65,7 @@ export default function NavBar() {
               href='/resume'
             >
               <ReceiptLongOutlinedIcon />
+              <Typography>Resume</Typography>
             </IconButton>
 
             <IconButton
@@ -73,6 +77,7 @@ export default function NavBar() {
               href='/contact'
             >
               <PhoneIphoneOutlinedIcon />
+              <Typography>Contact</Typography>
             </IconButton>
 
           </Toolbar>
