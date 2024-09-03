@@ -5,6 +5,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Portfolio from './pages/Portfolio'
 import Resume from './pages/Resume'
+import ContactModal from "./components/ContactModal";
 
 const router = createBrowserRouter([
     {
@@ -22,10 +23,6 @@ const router = createBrowserRouter([
             {
                 path: '/resume',
                 element: <Resume />
-            },
-            {
-                path: '/contact',
-                element: <Contact />
             }
         ]
     }

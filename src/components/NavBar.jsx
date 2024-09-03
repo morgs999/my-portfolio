@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,6 +8,8 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
 import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
+// import ContactModal from './ContactModal';
+import ContactDialog from './ContactDialog';
 
 import { createTheme } from '@mui/material/styles';
 import { Grid } from '@mui/material';
@@ -25,6 +28,14 @@ const theme = createTheme({
 });
 
 export default function NavBar() {
+  // const [isContactModalOpen, setContactModalOpen] = useState(false);
+  // const handleOpenContactModal = () => setContactModalOpen(true);
+  // const handleCloseContactModal = () => setContactModalOpen(false);
+
+  const [isContactDialogOpen, setContactDialogOpen] = useState(false);
+  const handleOpenContactDialog = () => setContactDialogOpen(true);
+  const handleCloseContactDialog = () => setContactDialogOpen(false);
+
   return (
     <Box sx={{ flexGrow: 1, mb: 20 }}>
       <AppBar className='p-4' >
@@ -74,7 +85,7 @@ export default function NavBar() {
               color="inherit"
               aria-label="contact"
               sx={{ mr: 2 }}
-              href='/contact'
+              onClick={handleOpenContactDialog}
             >
               <PhoneIphoneOutlinedIcon />
               <Typography>Contact</Typography>
@@ -83,6 +94,9 @@ export default function NavBar() {
           </Toolbar>
         </Grid>
       </AppBar>
+      <ContactDialog
+        open={isContactDialogOpen}
+        handleClose={handleCloseContactDialog} />
     </Box>
   );
 };
