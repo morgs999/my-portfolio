@@ -13,15 +13,11 @@ export default function ContactDialog({ open, handleClose }) {
     const form = useRef();
     const sendEmail = (e) => {
         // e.preventDefault();
-        console.log(form.current);
+        // console.log(form.current);
         emailjs
-            .sendForm('service_chh28n7', 'template_rpbod4p', form.current, {
+            .send('service_chh28n7', 'contact_form', form.current, {
                 publicKey: 'I91x20SLJJA_MZIIw',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                },
+            }).then(() => { },
                 (error) => {
                     console.log('FAILED...', error);
                 },
@@ -32,7 +28,6 @@ export default function ContactDialog({ open, handleClose }) {
         <>
             {/* <form ref={form} onSubmit={sendEmail}> </form>*/}
             <Dialog
-                id='form'
                 ref={form}
                 open={open}
                 onClose={handleClose}
@@ -42,9 +37,7 @@ export default function ContactDialog({ open, handleClose }) {
                         event.preventDefault();
                         const formData = new FormData(event.currentTarget);
                         const formJson = Object.fromEntries(formData.entries());
-                        const email = formJson.email;
                         form.current = formJson;
-                        // console.log(formJson);
                         sendEmail();
                         handleClose();
                     },
@@ -59,7 +52,7 @@ export default function ContactDialog({ open, handleClose }) {
                         autoFocus
                         required
                         margin="dense"
-                        id="name"
+                        id="email"
                         name="email"
                         label="Email Address"
                         type="email"
@@ -67,11 +60,10 @@ export default function ContactDialog({ open, handleClose }) {
                         variant="outlined"
                     />
                     <TextField
-
                         margin="dense"
                         id="name"
                         name="name"
-                        label="Name "
+                        label="Name"
                         fullWidth
                         variant="outlined"
                     />
@@ -82,7 +74,7 @@ export default function ContactDialog({ open, handleClose }) {
                         margin='dense'
                         id='message'
                         name='message'
-                        label='Message '
+                        label='Message'
                         fullWidth
                         variant='outlined'
                     />
