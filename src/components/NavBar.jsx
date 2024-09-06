@@ -8,8 +8,8 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
 import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
-// import ContactModal from './ContactModal';
 import ContactDialog from './ContactDialog';
+import Avatar from '@mui/material/Avatar';
 
 import { createTheme } from '@mui/material/styles';
 import { Grid } from '@mui/material';
@@ -28,9 +28,6 @@ const theme = createTheme({
 });
 
 export default function NavBar() {
-  // const [isContactModalOpen, setContactModalOpen] = useState(false);
-  // const handleOpenContactModal = () => setContactModalOpen(true);
-  // const handleCloseContactModal = () => setContactModalOpen(false);
 
   const [isContactDialogOpen, setContactDialogOpen] = useState(false);
   const handleOpenContactDialog = () => setContactDialogOpen(true);
@@ -38,17 +35,25 @@ export default function NavBar() {
 
   return (
     <Box sx={{ flexGrow: 1, mb: 20 }}>
-      <AppBar className='p-4' >
-        <Typography>Morgan Clarke</Typography>
-        <Grid container justifyContent="flex-end">
-          <Toolbar>
+      <AppBar className='d-flex flex-row justify-content-between align-items-center p-4'
+        sx={{ backgroundColor: 'black' }} >
+
+        <Avatar
+          alt="Morgan Clarke"
+          src="/pngs/headshot.jpg"
+          sx={{ width: '6em', height: '6em', border: '2px solid white', boxShadow: 10, marginLeft: 10, marginTop: 5, position: 'fixed' }}
+        />
+
+        <Grid container justifyContent="flex-end" alignItems="center"
+          marginLeft={10} marginRight={5}>
+          <Toolbar >
 
             <IconButton
               size="large"
               edge="start"
               color="inherit"
               aria-label="home"
-              sx={{ mr: 2, color: theme.palette.primary.main }}
+              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
               href='/'
             >
               <HomeOutlinedIcon />
@@ -60,7 +65,7 @@ export default function NavBar() {
               edge="start"
               color="inherit"
               aria-label="portfolio"
-              sx={{ mr: 2 }}
+              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
               href='/portfolio'
             >
               <DesktopMacOutlinedIcon />
@@ -72,7 +77,7 @@ export default function NavBar() {
               edge="start"
               color="inherit"
               aria-label="resume"
-              sx={{ mr: 2 }}
+              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
               href='/resume'
             >
               <ReceiptLongOutlinedIcon />
@@ -84,7 +89,7 @@ export default function NavBar() {
               edge="start"
               color="inherit"
               aria-label="contact"
-              sx={{ mr: 2 }}
+              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
               onClick={handleOpenContactDialog}
             >
               <PhoneIphoneOutlinedIcon />
