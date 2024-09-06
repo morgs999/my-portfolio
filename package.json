@@ -2,10 +2,13 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://morgs999.github.io/my-portfolio/",
   "description": "A portfolio to showcase my skills and experience.",
   "scripts": {
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Morgan Clarke",
   "license": "MIT",
@@ -28,6 +31,7 @@
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.1.1",
     "vite": "^5.1.4"
   }
 }
