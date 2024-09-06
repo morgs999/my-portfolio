@@ -46,3 +46,9 @@
     opacity: 1;
     z-index: 1;
 }
+
+#footerIcon:hover {
+    font-size: 350%;
+    padding-bottom: 10px;
+    transition: font-size 0.2s;
+}
