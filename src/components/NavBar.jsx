@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -48,41 +49,44 @@ export default function NavBar() {
           marginLeft={10} marginRight={5}>
           <Toolbar >
 
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="home"
-              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
-              href='/'
-            >
-              <HomeOutlinedIcon />
-              <Typography>About Me</Typography>
-            </IconButton>
+            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="home"
+                sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
+              >
+                <HomeOutlinedIcon />
+                <Typography>About Me</Typography>
+              </IconButton>
+            </Link>
 
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="portfolio"
-              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
-              href='/portfolio'
-            >
-              <DesktopMacOutlinedIcon />
-              <Typography>Portfolio</Typography>
-            </IconButton>
+            <Link to="/portfolio" style={{ color: 'white', textDecoration: 'none' }}>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="portfolio"
+                sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
+              >
+                <DesktopMacOutlinedIcon />
+                <Typography>Portfolio</Typography>
+              </IconButton>
+            </Link>
 
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="resume"
-              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
-              href='/resume'
-            >
-              <ReceiptLongOutlinedIcon />
-              <Typography>Resume</Typography>
-            </IconButton>
+            <Link to="/resume" style={{ color: 'white', textDecoration: 'none' }}>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="resume"
+                sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
+              >
+                <ReceiptLongOutlinedIcon />
+                <Typography>Resume</Typography>
+              </IconButton>
+            </Link>
 
             <IconButton
               size="large"
