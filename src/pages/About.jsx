@@ -27,7 +27,7 @@ export default function About() {
 
             </div>
 
-            <div className='experience p-5'>
+            <div className='container experience p-5'>
                 <div className='backend'>
                     <h2>Back End Experience</h2>
                     <ul>

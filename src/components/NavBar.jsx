@@ -42,7 +42,7 @@ export default function NavBar() {
         <Avatar
           alt="Morgan Clarke"
           src="/pngs/headshot.jpg"
-          sx={{ width: '6em', height: '6em', border: '2px solid white', boxShadow: 10, marginLeft: 10, marginTop: 5, position: 'fixed' }}
+          sx={{ width: '7em', height: '7em', border: '5px solid white', boxShadow: 10, marginLeft: 10, marginTop: 5, position: 'fixed' }}
         />
 
         <Grid container justifyContent="flex-end" alignItems="center"
