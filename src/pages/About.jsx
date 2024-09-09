@@ -1,3 +1,6 @@
+import ScrollAnimation from 'react-animate-on-scroll';
+import { RiReactjsLine } from "react-icons/ri";
+
 export default function About() {
     return (
         <>
@@ -30,9 +33,21 @@ export default function About() {
             </div>
 
             <div className='container exp-container p-5'>
+
+
                 <div id='exp-backend'>
-                    <h2>Back End Experience</h2>
+                    <ScrollAnimation
+                        animateIn='animate__fadeIn'
+                        duration='2'>
+                        <h2>Back End Experience</h2>
+                    </ScrollAnimation>
                     <ul>
+                        <ScrollAnimation animateIn='animate__bounceInRight'>
+                            <li>
+                                <RiReactjsLine style={{ color: 'cyan', fontSize: '5em' }} />
+                                React
+                            </li>
+                        </ScrollAnimation>
                         <li>Node JS and Express JS</li>
                         <li>Python / Django</li>
                         <li>C++</li>
@@ -41,6 +56,8 @@ export default function About() {
                         <li>GraphQL and GROQ</li>
                     </ul>
                 </div>
+
+
                 <div id='exp-frontend'>
                     <h2>Front End Experience</h2>
                     <ul>
@@ -92,7 +109,7 @@ export default function About() {
                         <li>ESLint</li>
                     </ul>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
