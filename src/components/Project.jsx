@@ -28,9 +28,9 @@ function Project({ project, index }) {
                     )}
                     <h3>
                         {project.name}{' '}
-                        <RiExternalLinkFill
+                        {/* <RiExternalLinkFill
                             onClick={() => openPage(project.deploy)}
-                        />
+                        /> */}
                         <FaGithub
                             onClick={() => handleRepoIcon(project.repo)}
                         />

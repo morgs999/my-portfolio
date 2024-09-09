@@ -1,34 +1,36 @@
 export default function About() {
     return (
         <>
-            <div className="container p-5">
+            <div className="container intro-container p-5">
 
-                <h3>
+                <h1 id='intro-name'>Morgan Clarke</h1>
+
+                <h3 id='intro-1'>
                     I am a Full Stack Software Developer with experience in extensive Front End and Back End languages, frameworks, and libraries.  I create elegant yet powerful code that utilizes cutting edge tools to deploy intuitive software applications.
                 </h3>
-                <h5>
+                <h5 id='intro-2'>
                     Having worked as an audio engineer for the last decade plus, I am fascinated by the inventive component of coding; in conjunction, I am also methodical in leveraging the necessary tools to solve tricky problems.
                 </h5>
-                <ul>
+                <ul id='intro-ul'>
                     This extensive experience combining creative solutions with effective communication and organization allows me to:
                 </ul>
-                <li>
+                <li id='intro-li-1'>
                     Keep up in fast-paced work environments
                 </li>
-                <li>
+                <li id='intro-li-2'>
                     Handles stressful situations with the end goal always in mind
                 </li>
-                <li>
+                <li id='intro-li-3'>
                     Quickly adapt to cutting edge technologies
                 </li>
-                <li>
+                <li id='intro-li-4'>
                     Approach each problem with a combination of logical understanding and creative flair
                 </li>
 
             </div>
 
-            <div className='container experience p-5'>
-                <div className='backend'>
+            <div className='container exp-container p-5'>
+                <div id='exp-backend'>
                     <h2>Back End Experience</h2>
                     <ul>
                         <li>Node JS and Express JS</li>
@@ -39,7 +41,7 @@ export default function About() {
                         <li>GraphQL and GROQ</li>
                     </ul>
                 </div>
-                <div className='frontend'>
+                <div id='exp-frontend'>
                     <h2>Front End Experience</h2>
                     <ul>
                         <li>React</li>
@@ -50,7 +52,7 @@ export default function About() {
                         <li>HTML</li>
                     </ul>
                 </div>
-                <div className='database'>
+                <div id='exp-database'>
                     <h2>Database Experience</h2>
                     <ul>
                         <li>MongoDB (NoSQL)</li>
@@ -58,7 +60,7 @@ export default function About() {
                         <li>PostgreSQL</li>
                     </ul>
                 </div>
-                <div className='devops'>
+                <div id='exp-devops'>
                     <h2>DevOps Experience</h2>
                     <ul>
                         <li>Github / Gitlab</li>
@@ -73,7 +75,7 @@ export default function About() {
                         <li>Kubernetes / Docker</li>
                     </ul>
                 </div>
-                <div className='mobile'>
+                <div id='exp-mobile'>
                     <h2>Mobile Development Experience</h2>
                     <ul>
                         <li>React Native</li>
@@ -81,7 +83,7 @@ export default function About() {
                         <li>XCode</li>
                     </ul>
                 </div>
-                <div className='testing'>
+                <div id='exp-testing'>
                     <h2>Testing Experience</h2>
                     <ul>
                         <li>Pytest</li>
