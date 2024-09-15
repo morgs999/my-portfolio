@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <div className='bg-black pb-3'>
             <hr></hr>
-            <div container className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-center'>
                 <a href='https://linkedin.com/in/morgandclarke' target='_blank' rel='noreferrer'>
                     <LinkedInIcon id='footerIcon' className='text-white m-1' fontSize='large' />
                 </a>

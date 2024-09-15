@@ -1,3 +1,4 @@
+import Experience from '../components/Experience';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { RiReactjsLine } from "react-icons/ri";
 
@@ -33,12 +34,12 @@ export default function About() {
             </div>
 
             <div className='container exp-container p-5'>
-
+                <Experience />
 
                 <div id='exp-backend'>
                     <ScrollAnimation
                         animateIn='animate__fadeIn'
-                        duration='2'>
+                        duration={2}>
                         <h2>Back End Experience</h2>
                     </ScrollAnimation>
                     <ul>
