@@ -11,12 +11,12 @@ export default function Experience() {
             rows: [
                 {
                     name: "React JS",
-                    icon: <SiReact />,
+                    icon: <SiReact className='text-secondary' />,
                     color: 'cyan'
                 },
                 {
                     name: "Node JS and Express JS",
-                    icon: <FaNode />,
+                    icon: <FaNode className='text-primary' />,
                     color: 'green'
                 },
                 {
@@ -31,7 +31,7 @@ export default function Experience() {
                 },
                 {
                     name: "RESTful and SOAP APIs",
-                    icon: <TbApi />,
+                    icon: <TbApi className='text-primary' />,
                     color: 'darkgrey'
                 },
                 {
@@ -203,24 +203,24 @@ export default function Experience() {
                     return (
                         <Grid className='table'>
                             <div id={key} className='exp-title'>
-
                                 <h5>
                                     {value.title}
                                 </h5>
-
-                            </div>
-
-                            <div className='table-body'>
-                                {value.rows.map((item, index) => {
-                                    return (
-                                        <div key={index} className='table-row'>
-                                            <div className='table-item' style={{ color: `${item.color}` }}>
-                                                {item.icon ? item.icon : <img src={item.img} alt={item.name} style={{ height: "6vh" }} />}
+                                <div className=''>
+                                    {value.rows.map((item, index) => {
+                                        return (
+                                            <div key={index}>
+                                                <div className='table-row'>
+                                                    <div className='exp-icon'>
+                                                        {item.icon}
+                                                    </div>
+                                                    <p className='table-item'>{item.name}</p>
+                                                </div>
                                             </div>
-                                            <div className='table-item'>{item.name}</div>
-                                        </div>
-                                    )
-                                })}
+
+                                        )
+                                    })}
+                                </div>
                             </div>
                         </Grid>
                     )
