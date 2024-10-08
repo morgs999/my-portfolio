@@ -1,10 +1,8 @@
-import { Grid } from '@mui/material';
 import { FaNode, FaAws } from "react-icons/fa";
 import { SiReact, SiExpress, SiPython, SiSanity, SiGraphql, SiJavascript, SiTypescript, SiNextdotjs, SiCss3, SiBootstrap, SiTailwindcss, SiBulma, SiHtml5, SiMongodb, SiMysql, SiPostgresql, SiGithub, SiJira, SiFigma, SiVercel, SiHeroku, SiNetlify, SiKubernetes, SiSwift, SiXcode, SiPytest, SiMocha, SiJest, SiEslint, SiAmp, SiApachesuperset, SiAwselasticloadbalancing, SiCplusplus } from "react-icons/si";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
 
-
-export default function Experience() {
+export default function expTable() {
     const exp = {
         backend: {
             title: 'Back End Experience',
@@ -194,39 +192,4 @@ export default function Experience() {
             }]
         }
     }
-
-    return (
-        <>
-            <Grid container spacing={1}>
-
-                {Object.entries(exp).map(([key, value]) => {
-                    return (
-                        <Grid className='table'>
-                            <div id={key} className='exp-title'>
-
-                                <h5>
-                                    {value.title}
-                                </h5>
-
-                            </div>
-
-                            <div className='table-body'>
-                                {value.rows.map((item, index) => {
-                                    return (
-                                        <div key={index} className='table-row'>
-                                            <div className='table-item' style={{ color: `${item.color}` }}>
-                                                {item.icon ? item.icon : <img src={item.img} alt={item.name} style={{ height: "6vh" }} />}
-                                            </div>
-                                            <div className='table-item'>{item.name}</div>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </Grid>
-                    )
-                })}
-
-            </Grid>
-        </>
-    )
-} 
+}

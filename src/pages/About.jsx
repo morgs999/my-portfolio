@@ -1,13 +1,16 @@
 import Experience from '../components/Experience';
+import 'animate.css';
+import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
-import { RiReactjsLine } from "react-icons/ri";
 
 export default function About() {
     return (
         <>
             <div className="container intro-container p-5">
-
-                <h1 id='intro-name'>Morgan Clarke</h1>
+                <ScrollAnimation animateIn="fadeIn" duration={2}>
+                    <h1>Morgan Clarke</h1>
+                </ScrollAnimation>
+                <h1 class="animate__animated animate__slideInRight" id=''>Morgan Clarke</h1>
 
                 <h3 id='intro-1'>
                     I am a Full Stack Software Developer with experience in extensive Front End and Back End languages, frameworks, and libraries.  I create elegant yet powerful code that utilizes cutting edge tools to deploy intuitive software applications.
@@ -33,8 +36,11 @@ export default function About() {
 
             </div>
 
-            <div className='container exp-container p-5'>
-                <Experience />
+            <div className='container exp-container'>
+                <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+
+                    <Experience />
+                </ScrollAnimation>
             </div >
         </>
     )

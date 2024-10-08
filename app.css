@@ -3,7 +3,6 @@
 }
 
 /* ABOUT PAGE */
-
 #intro-name {
     animation: slideRight 1s ease forwards;
 }
@@ -40,37 +39,38 @@
 
 #intro-li-4 {
     opacity: 0;
-    animation: slideRight 1s ease forwards 2.3s;
-}
-
-#exp-backend {
-    opacity: 0;
-    animation: fadeIn 1s linear forwards;
+    animation: fadeIn 1s ease forwards 2.3s;
 }
 
 /* EXPERIENCE TABLES */
+.exp-title {
+    color: pink;
+}
 
-table {
-    padding: 3px;
-    margin: auto;
+.table {
+    display: flex;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0.1rem;
+    max-height: 20rem;
+    overflow: scroll;
 }
 
 .table-row {
-    border-radius: 25px;
+    border-radius: 0.75rem;
     display: flex;
-    margin: 2em;
+    margin: 0.5rem;
     background-color: rgba(176, 176, 176, 0.263);
-    box-shadow: 0.2em 0.2em 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .table-item {
-    padding: 10px;
-    font-size: 2.5em;
+    padding: 0.5rem;
+    font-size: 1rem;
 }
 
 
 /* RESUME PAGE */
-
 #resume {
     /* border: 2px solid cyan; */
     position: relative;
@@ -116,12 +116,12 @@ table {
     z-index: 1;
 }
 
+/* FOOTER */
 #footerIcon:hover {
     font-size: 350%;
     padding-bottom: 10px;
     transition: font-size 0.2s;
 }
-
 
 /* ANIMATIONS */
 @keyframes slideLeft {
@@ -147,7 +147,6 @@ table {
         opacity: 1;
     }
 }
-
 
 @keyframes slideTop {
     0% {
