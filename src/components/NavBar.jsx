@@ -109,9 +109,10 @@ export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1, mb: 20 }} >
 
-      <AppBar className='d-flex flex-row justify-content-between align-items-center p-1' sx={{ backgroundColor: 'black' }} >
+      <AppBar className='nav-bar d-flex flex-row justify-content-between align-items-center p-1' sx={{ backgroundColor: 'black' }} >
 
         <Avatar
+          className='avatar'
           alt="Morgan Clarke"
           src="/pngs/headshot.jpg"
           sx={{ width: '7em', height: '7em', border: '5px solid white', boxShadow: 10, position: 'fixed', marginLeft: 10, marginTop: 8, marginRight: 10 }}
