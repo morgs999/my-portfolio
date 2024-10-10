@@ -1,9 +1,16 @@
+import Experience from '../components/Experience';
+import 'animate.css';
+import "animate.css/animate.compat.css"
+import ScrollAnimation from 'react-animate-on-scroll';
+
 export default function About() {
     return (
         <>
             <div className="container intro-container p-5">
-
-                <h1 id='intro-name'>Morgan Clarke</h1>
+                {/* <ScrollAnimation animateIn="fadeIn" duration={2}>
+                    <h1>Morgan Clarke</h1>
+                </ScrollAnimation> */}
+                <h1 className="animate__animated animate__slideInRight" id=''>Morgan Clarke</h1>
 
                 <h3 id='intro-1'>
                     I am a Full Stack Software Developer with experience in extensive Front End and Back End languages, frameworks, and libraries.  I create elegant yet powerful code that utilizes cutting edge tools to deploy intuitive software applications.
@@ -29,70 +36,12 @@ export default function About() {
 
             </div>
 
-            <div className='container exp-container p-5'>
-                <div id='exp-backend'>
-                    <h2>Back End Experience</h2>
-                    <ul>
-                        <li>Node JS and Express JS</li>
-                        <li>Python / Django</li>
-                        <li>C++</li>
-                        <li>RESTful and SOAP APIs</li>
-                        <li>Sanity IO CMS</li>
-                        <li>GraphQL and GROQ</li>
-                    </ul>
-                </div>
-                <div id='exp-frontend'>
-                    <h2>Front End Experience</h2>
-                    <ul>
-                        <li>React</li>
-                        <li>Javascript</li>
-                        <li>Typescript</li>
-                        <li>Next JS</li>
-                        <li>CSS (Bootstrap, Tailwind, Bulma, etc.)</li>
-                        <li>HTML</li>
-                    </ul>
-                </div>
-                <div id='exp-database'>
-                    <h2>Database Experience</h2>
-                    <ul>
-                        <li>MongoDB (NoSQL)</li>
-                        <li>MySQL (SQL)</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-                </div>
-                <div id='exp-devops'>
-                    <h2>DevOps Experience</h2>
-                    <ul>
-                        <li>Github / Gitlab</li>
-                        <li>Jira</li>
-                        <li>Figma</li>
-                        <li>Vercel / Heroku / Netlify</li>
-                        <li>Agile Development</li>
-                        <li>OOP</li>
-                        <li>MVC</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>AWS / GCP / Firebase</li>
-                        <li>Kubernetes / Docker</li>
-                    </ul>
-                </div>
-                <div id='exp-mobile'>
-                    <h2>Mobile Development Experience</h2>
-                    <ul>
-                        <li>React Native</li>
-                        <li>Swift</li>
-                        <li>XCode</li>
-                    </ul>
-                </div>
-                <div id='exp-testing'>
-                    <h2>Testing Experience</h2>
-                    <ul>
-                        <li>Pytest</li>
-                        <li>Mocha</li>
-                        <li>Jest</li>
-                        <li>ESLint</li>
-                    </ul>
-                </div>
-            </div>
+            <div className='container exp-container'>
+                <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
+
+                    <Experience />
+                </ScrollAnimation>
+            </div >
         </>
     )
 }
