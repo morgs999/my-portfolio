@@ -1,10 +1,17 @@
-:root {
-    background-color: white;
-    color: black;
+.qwitcher-grypen-bold {
+    font-family: "Qwitcher Grypen", cursive;
+    font-weight: 700;
+    font-style: normal;
 }
 
 * {
     font-family: Roboto, sans-serif;
+}
+
+.signature {
+    font-family: "Qwitcher Grypen", cursive;
+    font-size: 5em;
+    margin-right: 1em;
 }
 
 /* ABOUT PAGE */
@@ -57,9 +64,10 @@
     display: flex;
     flex-wrap: wrap;
     padding-left: 10px;
+    border: 1px solid white;
     background-color: rgba(200, 200, 200, 0.1);
     border-radius: 0.5rem;
-    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+    box-shadow: -0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 
@@ -131,7 +139,7 @@
 
 @keyframes slideRight {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(100px);
         opacity: 0;
     }
 

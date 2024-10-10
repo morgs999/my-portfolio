@@ -2,6 +2,19 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
+
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -30,82 +43,99 @@ const theme = createTheme({
 
 export default function NavBar() {
 
+  const [open, setOpen] = useState(false);
+  const toggleDrawer = (newOpen) => () => { setOpen(newOpen) };
   const [isContactDialogOpen, setContactDialogOpen] = useState(false);
   const handleOpenContactDialog = () => setContactDialogOpen(true);
   const handleCloseContactDialog = () => setContactDialogOpen(false);
 
+  const DrawerList = (
+    <Box sx={{ width: 250 }} onClick={toggleDrawer(false)} >
+      <List>
+        <Link to="/" style={{ color: 'black', textDecoration: 'none' }}>
+          <ListItem key='about-me' disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <HomeOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <Typography>About Me</Typography>
+              </ListItemText>
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Divider />
+        <Link to="/portfolio" style={{ color: 'black', textDecoration: 'none' }}>
+          <ListItem key='portfolio' disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <DesktopMacOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <Typography>Portfolio</Typography>
+              </ListItemText>
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Divider />
+        <Link to="/resume" style={{ color: 'black', textDecoration: 'none' }}>
+          <ListItem key='resume' disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ReceiptLongOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <Typography>Resume</Typography>
+              </ListItemText>
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Divider />
+        <ListItem key='contact' disablePadding>
+          <ListItemButton onClick={handleOpenContactDialog}>
+            <ListItemIcon>
+              <PhoneIphoneOutlinedIcon />
+            </ListItemIcon>
+            <ListItemText>
+              <Typography>Contact</Typography>
+            </ListItemText>
+          </ListItemButton>
+        </ListItem>
+        <Divider />
+      </List>
+    </Box >
+  );
+
   return (
-    <Box sx={{ flexGrow: 1, mb: 20 }}>
-      <AppBar className='d-flex flex-row justify-content-between align-items-center p-4'
-        sx={{ backgroundColor: 'black' }} >
+    <Box sx={{ flexGrow: 1, mb: 20 }} >
+
+      <AppBar className='d-flex flex-row justify-content-between align-items-center p-1' sx={{ backgroundColor: 'black' }} >
 
         <Avatar
           alt="Morgan Clarke"
           src="/pngs/headshot.jpg"
-          sx={{ width: '7em', height: '7em', border: '5px solid white', boxShadow: 10, marginLeft: 10, marginTop: 5, position: 'fixed' }}
+          sx={{ width: '7em', height: '7em', border: '5px solid white', boxShadow: 10, position: 'fixed', marginLeft: 10, marginTop: 8, marginRight: 10 }}
         />
 
-        <Grid container justifyContent="flex-end" alignItems="center"
-          marginLeft={10} marginRight={5}>
-          <Toolbar >
+        <Grid container className='d-flex flex-row justify-content-end mx-5'>
 
-            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="home"
-                sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
-              >
-                <HomeOutlinedIcon />
-                <Typography>About Me</Typography>
-              </IconButton>
-            </Link>
+          {/* <Toolbar > */}
+          <h1 className='signature'>Morgan Clarke</h1>
 
-            <Link to="/portfolio" style={{ color: 'white', textDecoration: 'none' }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="portfolio"
-                sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
-              >
-                <DesktopMacOutlinedIcon />
-                <Typography>Portfolio</Typography>
-              </IconButton>
-            </Link>
+          <Button onClick={toggleDrawer(true)}>
+            <MenuIcon sx={{ fontSize: '2rem', color: 'white' }} />
+          </Button>
+          <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
+            {DrawerList}
+          </Drawer>
 
-            <Link to="/resume" style={{ color: 'white', textDecoration: 'none' }}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="resume"
-                sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
-              >
-                <ReceiptLongOutlinedIcon />
-                <Typography>Resume</Typography>
-              </IconButton>
-            </Link>
+          {/* </Toolbar> */}
 
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="contact"
-              sx={{ mr: 2, ":hover": { color: 'grey', textSizeAdjust: '120%' } }}
-              onClick={handleOpenContactDialog}
-            >
-              <PhoneIphoneOutlinedIcon />
-              <Typography>Contact</Typography>
-            </IconButton>
-
-          </Toolbar>
         </Grid>
+
       </AppBar>
-      <ContactDialog
-        open={isContactDialogOpen}
-        handleClose={handleCloseContactDialog} />
+
+      <ContactDialog open={isContactDialogOpen} handleClose={handleCloseContactDialog} />
     </Box>
   );
 };
