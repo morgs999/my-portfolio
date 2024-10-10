@@ -1,3 +1,8 @@
+:root {
+    background-color: white;
+    color: black;
+}
+
 * {
     font-family: Roboto, sans-serif;
 }
@@ -43,35 +48,18 @@
 }
 
 /* EXPERIENCE TABLES */
-.exp-title {
-    color: pink;
-}
 
-.exp-icon {
-    font-size: 1.5rem;
-    margin: 1.5rem;
-}
-
-.table {
-    display: flex;
-    border: 1px solid black;
-    padding: 1rem;
-    margin: 0.1rem;
-    max-height: 20rem;
-    overflow: scroll;
+.exp-card {
+    height: 100%;
 }
 
 .table-row {
-    border-radius: 0.75rem;
     display: flex;
-    margin: 0.5rem;
-    background-color: rgba(176, 176, 176, 0.263);
+    flex-wrap: wrap;
+    padding-left: 10px;
+    background-color: rgba(200, 200, 200, 0.1);
+    border-radius: 0.5rem;
     box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
-}
-
-.table-item {
-    padding: 0.5rem;
-    font-size: 1rem;
 }
 
 

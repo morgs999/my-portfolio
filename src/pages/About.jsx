@@ -7,10 +7,10 @@ export default function About() {
     return (
         <>
             <div className="container intro-container p-5">
-                <ScrollAnimation animateIn="fadeIn" duration={2}>
+                {/* <ScrollAnimation animateIn="fadeIn" duration={2}>
                     <h1>Morgan Clarke</h1>
-                </ScrollAnimation>
-                <h1 class="animate__animated animate__slideInRight" id=''>Morgan Clarke</h1>
+                </ScrollAnimation> */}
+                <h1 className="animate__animated animate__slideInRight" id=''>Morgan Clarke</h1>
 
                 <h3 id='intro-1'>
                     I am a Full Stack Software Developer with experience in extensive Front End and Back End languages, frameworks, and libraries.  I create elegant yet powerful code that utilizes cutting edge tools to deploy intuitive software applications.
