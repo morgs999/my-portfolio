@@ -9,7 +9,7 @@ export default function About() {
             <div className="container intro-container p-5">
                 {/* <h1 className="signature" id=''>Morgan Clarke</h1> */}
 
-                <h3 className="animate__animated">
+                <h3 id="intro-1">
                     I am a Full Stack Software Developer with experience in extensive Front End and Back End languages, frameworks, and libraries.  I create elegant yet powerful code that utilizes cutting edge tools to deploy intuitive software applications.
                 </h3>
 
