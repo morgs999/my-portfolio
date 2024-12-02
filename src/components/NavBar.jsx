@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
@@ -11,13 +11,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
+
+import MenuIcon from '@mui/icons-material/Menu';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
@@ -29,17 +25,17 @@ import { createTheme } from '@mui/material/styles';
 import { Grid } from '@mui/material';
 
 
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: 'rgba(0,0,0,0.81)',
-    },
-    secondary: {
-      main: 'rgba(9,0,129,0.78)',
-    },
-  },
-});
+// const theme = createTheme({
+//   palette: {
+//     mode: 'light',
+//     primary: {
+//       main: 'rgba(0,0,0,0.81)',
+//     },
+//     secondary: {
+//       main: 'rgba(9,0,129,0.78)',
+//     },
+//   },
+// });
 
 export default function NavBar() {
 
@@ -126,7 +122,10 @@ export default function NavBar() {
           <Button onClick={toggleDrawer(true)}>
             <MenuIcon sx={{ fontSize: '2rem', color: 'white' }} />
           </Button>
-          <Drawer open={open} onClose={toggleDrawer(false)} anchor='right'>
+          <Drawer open={open} onClose={toggleDrawer(false)} anchor="right"
+            color="neutral"
+            size="sm"
+            variant="soft">
             {DrawerList}
           </Drawer>
 
