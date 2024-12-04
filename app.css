@@ -79,6 +79,19 @@
     box-shadow: -0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
+/* PORTFOLIO PAGE */
+.projectcarousel {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    width: 85%;
+}
+
+.projectcard {
+    /* width: 75%; */
+}
+
 
 /* RESUME PAGE */
 #resume {

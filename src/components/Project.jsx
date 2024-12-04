@@ -15,8 +15,8 @@ function Project({ project, index }) {
         <>
             <div key={index}>
                 <Paper
-                    elevation={10}
-                    className='p-3 m-3 d-flex flex-column align-items-center justify-content-center'
+                    elevation={12}
+                    className='projectcard p-3 m-3 d-flex flex-column align-items-center justify-content-center'
                 >
                     {project.photo && (
                         <img

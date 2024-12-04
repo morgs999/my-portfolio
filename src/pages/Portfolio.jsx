@@ -46,9 +46,9 @@ export default function Portfolio() {
     ];
 
     return (
-        <div>
-            <Carousel
-                sx={{ padding: '4rem', margin: '2rem', justifyContent: 'center' }}
+        <div className='d-flex flex-column align-items-center justify-content-center'>
+            <Carousel className='projectcarousel'
+                sx={{ padding: '4rem', margin: '2rem' }}
                 navButtonsAlwaysVisible={true}
                 stopAutoPlayOnHover={true}
                 navButtonsProps={{
