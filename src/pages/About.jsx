@@ -2,6 +2,7 @@ import Experience from '../components/Experience';
 import 'animate.css';
 import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
+import Portfolio from './Portfolio';
 
 export default function About() {
     return (
@@ -46,6 +47,9 @@ export default function About() {
                     <Experience />
                 </ScrollAnimation>
             </div >
+            <div>
+                <Portfolio />
+            </div>
         </>
     )
 }

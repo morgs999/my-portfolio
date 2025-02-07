@@ -1,5 +1,5 @@
 import { FaNode, FaAws } from "react-icons/fa";
-import { SiReact, SiExpress, SiPython, SiSanity, SiGraphql, SiJavascript, SiTypescript, SiNextdotjs, SiCss3, SiBootstrap, SiTailwindcss, SiBulma, SiHtml5, SiMongodb, SiMysql, SiPostgresql, SiGithub, SiJira, SiFigma, SiVercel, SiHeroku, SiNetlify, SiKubernetes, SiSwift, SiXcode, SiPytest, SiMocha, SiJest, SiEslint, SiAmp, SiApachesuperset, SiAwselasticloadbalancing, SiCplusplus, SiDjango } from "react-icons/si";
+import { SiReact, SiExpress, SiPython, SiSanity, SiGraphql, SiJavascript, SiTypescript, SiNextdotjs, SiCss3, SiBootstrap, SiTailwindcss, SiBulma, SiHtml5, SiMongodb, SiMysql, SiPostgresql, SiGithub, SiJira, SiFigma, SiVercel, SiHeroku, SiNetlify, SiKubernetes, SiSwift, SiXcode, SiPytest, SiMocha, SiJest, SiEslint, SiAmp, SiApachesuperset, SiAwselasticloadbalancing, SiCplusplus, SiDjango, SiFirebase } from "react-icons/si";
 import { TbApi, TbBrandReactNative, TbBoxModel } from "react-icons/tb";
 
 export const expTable = {
@@ -141,14 +141,14 @@ export const expTable = {
         title: 'Database Experience',
         rows: [
             {
+                name: "Firebase",
+                icon: <SiFirebase />,
+                color: 'orange'
+            },
+            {
                 name: "MongoDB (NoSQL)",
                 icon: <SiMongodb />,
                 color: 'darkgreen'
-            },
-            {
-                name: "MySQL (SQL)",
-                icon: <SiMysql />,
-                color: 'lightblue'
             },
             {
                 name: "PostgreSQL",
@@ -156,7 +156,12 @@ export const expTable = {
                 color: 'darkblue'
             },
             {
-                name: "GraphQL and GROQ",
+                name: "MySQL (SQL)",
+                icon: <SiMysql />,
+                color: 'lightblue'
+            },
+            {
+                name: "GraphQL",
                 icon: <SiGraphql />,
                 color: 'pink'
             },
@@ -169,11 +174,11 @@ export const expTable = {
             icon: <TbBrandReactNative />,
             color: 'blue'
         },
-        {
-            name: "Swift",
-            icon: <SiSwift />,
-            color: 'orange'
-        },
+        // {
+        //     name: "Swift",
+        //     icon: <SiSwift />,
+        //     color: 'orange'
+        // },
         {
             name: "XCode",
             icon: <SiXcode />,
@@ -197,10 +202,11 @@ export const expTable = {
             icon: <SiJest />,
             color: 'darkblue'
         },
-        {
-            name: "ESLint",
-            icon: <SiEslint />,
-            color: 'brown'
-        }]
+            // {
+            //     name: "ESLint",
+            //     icon: <SiEslint />,
+            //     color: 'brown'
+            // }
+        ]
     }
 }
