@@ -47,9 +47,9 @@ export default function About() {
                     <Experience />
                 </ScrollAnimation>
             </div >
-            <div>
+            {/* <div>
                 <Portfolio />
-            </div>
+            </div> */}
         </>
     )
 }

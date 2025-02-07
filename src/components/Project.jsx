@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { RiExternalLinkFill } from "react-icons/ri";
 import { Card } from '@mui/joy';
 import { Paper, Typography } from '@mui/material';
-import { projects } from "../constants/projects";
 
-function Project({ project, index }) {
+function Project({ project, index, hideTools }) {
     const [toolsVisible, setToolsVisible] = useState(false);
     const toggleToolsVisibility = () => {
         setToolsVisible(!toolsVisible);
@@ -16,6 +15,11 @@ function Project({ project, index }) {
     const handleRepoIcon = (repoUrl) => {
         window.open(repoUrl, "_blank");
     };
+    useEffect(() => {
+        if (hideTools) {
+            setToolsVisible(false);
+        }
+    }, [hideTools]);
 
     // return (
     //     <>
@@ -47,11 +51,11 @@ function Project({ project, index }) {
     // )
     return (
         <>
-            <div key={index}>
+            <div key={index} className='royalblue'>
                 <Paper
                     elevation={12}
                     className='projectcard p-3 m-3 d-flex flex-column align-items-center justify-content-center'
-                    sx={{ flexGrow: 1 }}
+                    sx={{ flexGrow: 1, backgroundColor: 'pink' }}
 
                 >
                     <Typography variant='h4' className='p-3 m-3'>

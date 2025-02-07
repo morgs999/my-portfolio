@@ -21,7 +21,6 @@ export const projects = {
         tools: {
             frontend: [<SiReact />, <SiBootstrap />,],
             backend: [<SiMongodb />, <SiExpress />, <SiNodedotjs />]
-
         }
     },
     mathmastery: {
