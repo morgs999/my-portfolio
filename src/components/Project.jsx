@@ -4,7 +4,7 @@ import { RiExternalLinkFill } from "react-icons/ri";
 import { Card } from '@mui/joy';
 import { Paper, Typography } from '@mui/material';
 
-function Project({ project, index, hideTools }) {
+export default function Project({ project, index, hideTools }) {
     const [toolsVisible, setToolsVisible] = useState(false);
     const toggleToolsVisibility = () => {
         setToolsVisible(!toolsVisible);
@@ -21,41 +21,16 @@ function Project({ project, index, hideTools }) {
         }
     }, [hideTools]);
 
-    // return (
-    //     <>
-    //         <div key={index}>
-    //             <Paper
-    //                 elevation={12}
-    //                 className='projectcard p-3 m-3 d-flex flex-column align-items-center justify-content-center'
-    //             >
-    //                 {project.photo && (
-    //                     <img
-    //                         className='p-3 m-3'
-    //                         src={project.photo}
-    //                         alt={project.name}
-    //                         onClick={() => openPage(project.deploy)}
-    //                     />
-    //                 )}
-    //                 <h3>
-    //                     {project.name}{' '}
-    //                     {/* <RiExternalLinkFill
-    //                         onClick={() => openPage(project.deploy)}
-    //                     /> */}
-    //                     <FaGithub
-    //                         onClick={() => handleRepoIcon(project.repo)}
-    //                     />
-    //                 </h3>
-    //             </Paper>
-    //         </div>
-    //     </>
-    // )
     return (
         <>
-            <div key={index} className='royalblue'>
+            <div key={index} className=''>
                 <Paper
                     elevation={12}
                     className='projectcard p-3 m-3 d-flex flex-column align-items-center justify-content-center'
-                    sx={{ flexGrow: 1, backgroundColor: 'pink' }}
+                    sx={{
+                        flexGrow: 1,
+                        backgroundColor: 'pink'
+                    }}
 
                 >
                     <Typography variant='h4' className='p-3 m-3'>
@@ -92,5 +67,3 @@ function Project({ project, index, hideTools }) {
         </>
     )
 }
-
-export default Project;

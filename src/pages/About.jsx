@@ -43,13 +43,11 @@ export default function About() {
 
             <div className='container exp-container'>
                 <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-
                     <Experience />
                 </ScrollAnimation>
             </div >
-            {/* <div>
-                <Portfolio />
-            </div> */}
+
+            <Portfolio />
         </>
     )
 }
