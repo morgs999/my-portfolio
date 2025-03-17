@@ -2,6 +2,7 @@ import Experience from '../components/Experience';
 import 'animate.css';
 import "animate.css/animate.compat.css"
 import ScrollAnimation from 'react-animate-on-scroll';
+import Portfolio from './Portfolio';
 
 export default function About() {
     return (
@@ -42,10 +43,10 @@ export default function About() {
 
             <div className='container exp-container'>
                 <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce={true}>
-
                     <Experience />
                 </ScrollAnimation>
             </div >
+
         </>
     )
 }

@@ -5,7 +5,7 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 export default function Footer() {
     return (
         <div className='bg-black pb-3'>
-            <hr></hr>
+            <hr />
             <div className='d-flex justify-content-center'>
                 <a href='https://linkedin.com/in/morgandclarke' target='_blank' rel='noreferrer'>
                     <LinkedInIcon id='footerIcon' className='text-white m-1' fontSize='large' />

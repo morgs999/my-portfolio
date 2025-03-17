@@ -103,39 +103,42 @@ export default function NavBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1, mb: 20 }} >
+    <>
+      {/* <Box sx={{ flexGrow: 1, mb: 20 }} > */}
+      <div className='header'>
+        <AppBar className='header nav-bar d-flex flex-row justify-content-between align-items-center p-1' sx={{ backgroundColor: 'black' }} >
 
-      <AppBar className='nav-bar d-flex flex-row justify-content-between align-items-center p-1' sx={{ backgroundColor: 'black' }} >
+          <Avatar
+            className='avatar'
+            alt="Morgan Clarke"
+            src="/pngs/headshot.jpg"
+            sx={{ width: '7em', height: '7em', border: '5px solid white', boxShadow: 10, position: 'fixed', marginLeft: 10, marginTop: 8, marginRight: 10 }}
+          />
 
-        <Avatar
-          className='avatar'
-          alt="Morgan Clarke"
-          src="/pngs/headshot.jpg"
-          sx={{ width: '7em', height: '7em', border: '5px solid white', boxShadow: 10, position: 'fixed', marginLeft: 10, marginTop: 8, marginRight: 10 }}
-        />
+          <Grid container className='d-flex flex-row justify-content-end mx-5'>
 
-        <Grid container className='d-flex flex-row justify-content-end mx-5'>
+            {/* <Toolbar > */}
+            <h1 className='signature'>Morgan Clarke</h1>
 
-          {/* <Toolbar > */}
-          <h1 className='signature'>Morgan Clarke</h1>
+            <Button onClick={toggleDrawer(true)}>
+              <MenuIcon sx={{ fontSize: '2rem', color: 'white' }} />
+            </Button>
+            <Drawer open={open} onClose={toggleDrawer(false)} anchor="right"
+              color="neutral"
+              size="sm"
+              variant="soft">
+              {DrawerList}
+            </Drawer>
 
-          <Button onClick={toggleDrawer(true)}>
-            <MenuIcon sx={{ fontSize: '2rem', color: 'white' }} />
-          </Button>
-          <Drawer open={open} onClose={toggleDrawer(false)} anchor="right"
-            color="neutral"
-            size="sm"
-            variant="soft">
-            {DrawerList}
-          </Drawer>
+            {/* </Toolbar> */}
 
-          {/* </Toolbar> */}
+          </Grid>
 
-        </Grid>
+        </AppBar>
 
-      </AppBar>
-
-      <ContactDialog open={isContactDialogOpen} handleClose={handleCloseContactDialog} />
-    </Box>
+        <ContactDialog open={isContactDialogOpen} handleClose={handleCloseContactDialog} />
+      </div>
+      {/* </Box> */}
+    </>
   );
 };
