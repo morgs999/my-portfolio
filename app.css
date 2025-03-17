@@ -4,6 +4,14 @@
     font-style: normal;
 }
 
+.pixelify-sans {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
 .signature {
     font-family: "Qwitcher Grypen", cursive;
     font-size: 5em;
@@ -51,26 +59,31 @@ body {
 #intro-ul {
     opacity: 0;
     animation: slideRight 1s ease forwards 1.5s;
+    padding-left: 1rem;
 }
 
 #intro-li-1 {
     opacity: 0;
     animation: slideRight 1s ease forwards 2s;
+    margin-left: 10rem;
 }
 
 #intro-li-2 {
     opacity: 0;
     animation: slideRight 1s ease forwards 2.1s;
+    margin-left: 10rem;
 }
 
 #intro-li-3 {
     opacity: 0;
     animation: slideRight 1s ease forwards 2.2s;
+    margin-left: 10rem;
 }
 
 #intro-li-4 {
     opacity: 0;
     animation: slideRight 1s ease forwards 2.3s;
+    margin-left: 10rem;
 }
 
 /* EXPERIENCE TABLES */
@@ -120,71 +133,48 @@ body {
     padding: 1rem;
 }
 
-.projectcard {
-    /* width: 75%; */
-}
-
-@media (max-width: 768px) {
-    .portfolio-container {
-        flex-direction: column;
-    }
-
-    .buttons-column {
-        flex: 1;
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .projects-column {
-        flex: 1;
-        width: 100%;
-    }
-
-    .buttons-column button {
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-}
-
 /* RESUME PAGE */
 #resume {
-    /* border: 2px solid cyan; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    height: 100vh;
-    width: 100vw;
-    vertical-align: middle;
-    margin-bottom: 130px;
 }
 
 #resumePic {
-    /* border: 1px solid red; */
     filter: blur(2px);
-    position: absolute;
-    z-index: 1;
-    top: 0;
-
+    max-width: 100%;
+    height: auto;
+    display: block;
+    top: -75px;
+    margin: 0 auto;
+    position: relative;
 }
 
 #resumePic:hover {
     filter: blur(4px);
     opacity: 0.5;
-    transition: opacity .6s;
+    /* transition: opacity .6s; */
     z-index: 0;
 }
 
 #resumeText {
-    border: 1px solid blue;
-    overflow: hidden;
-    opacity: 0.3;
-    transition: visibility 0.6s, opacity 0.6s linear;
+    display: none;
     position: absolute;
-    z-index: 0;
-    text-align: center;
     top: 50%;
-    left: 40%;
-    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
 
+}
+
+#resumePic:hover+#resumeText {
+    display: block;
 }
 
 #resumeText:hover {
@@ -282,5 +272,29 @@ body {
     .signature {
         font-size: 2em;
         visibility: hidden;
+    }
+}
+
+/* PORTFOLIO MOBILE */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+    }
+
+    .buttons-column {
+        flex: 1;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .projects-column {
+        flex: 1;
+        width: 100%;
+    }
+
+    .buttons-column button {
+        width: 100%;
+        margin-bottom: 0.5rem;
     }
 }
