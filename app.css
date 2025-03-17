@@ -98,14 +98,54 @@ body {
 }
 
 /* PORTFOLIO PAGE */
-.projectcarousel {
-    width: 85%;
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons-column {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    /* align-items:flex-end; */
+    padding: 0.5rem;
+    border-right: 1px solid #ccc;
+}
+
+.projects-column {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .projectcard {
     /* width: 75%; */
 }
 
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+    }
+
+    .buttons-column {
+        flex: 1;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .projects-column {
+        flex: 1;
+        width: 100%;
+    }
+
+    .buttons-column button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
 
 /* RESUME PAGE */
 #resume {

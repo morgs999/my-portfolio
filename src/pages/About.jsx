@@ -47,7 +47,6 @@ export default function About() {
                 </ScrollAnimation>
             </div >
 
-            <Portfolio />
         </>
     )
 }
