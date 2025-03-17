@@ -10,17 +10,17 @@ export default function About() {
         <>
             <div className="container intro-container pt-5 d-flex flex-column justify-content-center align-items-center">
 
-                <h3 id="intro-1">
+                <div id="intro-1">
                     <Typography variant='h5' className=''>
                         I am a Full Stack Software Developer with experience in extensive Front End and Back End languages, frameworks, and libraries.  I create elegant yet powerful code that utilizes cutting edge tools to deploy intuitive software applications.
                     </Typography>
-                </h3>
+                </div>
 
-                <h5 id='intro-2'>
+                <div id='intro-2'>
                     <Typography variant='h6' className=' mt-2 p-3'>
                         Having worked as an audio engineer for the last decade plus, I am fascinated by the inventive component of coding; in conjunction, I am also methodical in leveraging the necessary tools to solve tricky problems.
                     </Typography>
-                </h5>
+                </div>
 
                 <ul id='intro-ul' className='list-unstyled'>
                     <Typography variant='h5' className=' p-3'>

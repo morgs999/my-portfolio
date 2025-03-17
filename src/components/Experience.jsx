@@ -9,7 +9,7 @@ export default function Experience() {
                 <div className="row">
                     {Object.entries(expTable).map(([key, value]) => {
                         return (
-                            <div className="col-lg-4 col-sm-6 pb-4">
+                            <div key={key} className="col-lg-4 col-sm-6 pb-4">
                                 <Paper className='exp-card' elevation={3}>
                                     <div id={key} className='exp-card border border-2 rounded p-4 '>
                                         <h5 className='typewriter'>

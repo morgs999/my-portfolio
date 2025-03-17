@@ -12,6 +12,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+import { Grid } from '@mui/material';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -19,23 +21,7 @@ import DesktopMacOutlinedIcon from '@mui/icons-material/DesktopMacOutlined';
 import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
 import PhoneIphoneOutlinedIcon from '@mui/icons-material/PhoneIphoneOutlined';
 import ContactDialog from './ContactDialog';
-import Avatar from '@mui/material/Avatar';
 
-import { createTheme } from '@mui/material/styles';
-import { Grid } from '@mui/material';
-
-
-// const theme = createTheme({
-//   palette: {
-//     mode: 'light',
-//     primary: {
-//       main: 'rgba(0,0,0,0.81)',
-//     },
-//     secondary: {
-//       main: 'rgba(9,0,129,0.78)',
-//     },
-//   },
-// });
 
 export default function NavBar() {
 
@@ -118,7 +104,9 @@ export default function NavBar() {
           <Grid container className='d-flex flex-row justify-content-end mx-5'>
 
             {/* <Toolbar > */}
-            <h1 className='signature'>Morgan Clarke</h1>
+            <Link to='/' style={{ color: 'white', textDecoration: 'none' }}>
+              <h1 className='signature'>Morgan Clarke</h1>
+            </Link>
 
             <Button onClick={toggleDrawer(true)}>
               <MenuIcon sx={{ fontSize: '2rem', color: 'white' }} />
@@ -126,7 +114,7 @@ export default function NavBar() {
             <Drawer open={open} onClose={toggleDrawer(false)} anchor="right"
               color="neutral"
               size="sm"
-              variant="soft">
+              variant="persistent">
               {DrawerList}
             </Drawer>
 
