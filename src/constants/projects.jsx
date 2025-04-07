@@ -4,7 +4,7 @@ import { TbApi } from "react-icons/tb";
 export const projects = [
     {
         name: "SideShow4U",
-        deploy: "In development!",
+        deploy: "https://sideshow4u-df733.web.app/",
         repo: "Private Repository",
         photo: "pngs/github-mark.png",
         description: "A FERN stack web application for connecting touring artists and boutique hotels, using assorted Firebase database tools and authentication.",
@@ -64,7 +64,7 @@ export const projects = [
     },
     {
         name: 'Literature Blog',
-        deploy: 'Not deployed',
+        deploy: 'https://morgan-clarke-blog-9b6bfcffe1b8.herokuapp.com/',
         repo: 'https://github.com/morgs999/myBlog',
         photo: 'pngs/github-mark.png',
         description: 'A blog built with Django and Python, with user authentication and commenting functionality.',
@@ -79,7 +79,7 @@ export const projects = [
     },
     {
         name: "Anyways, Here's Wonderwall",
-        deploy: "https://wonderwall-196032f35f7e.herokuapp.com/",
+        deploy: "No longer deployed.",
         repo: "https://github.com/Levi-Man/Wonderwall",
         photo: "gifs/anywayhereswonderwall.gif",
         description: "The Wonderwall Website allows a user to search for artists and scroll through their discography (via generated album covers), or look up the Billboard Top 10 from any year to find songs they want to revisit that nostalgia wave with.",
@@ -94,7 +94,7 @@ export const projects = [
     },
     {
         name: "Leftover Lover",
-        deploy: "https://damirfm.github.io/leftover/",
+        deploy: "No longer deployed.",
         repo: "https://github.com/DamirFM/The-Leftover-Lover",
         photo: "gifs/leftoverlover.gif",
         description: "The Leftover Lover web application allows you to input an ingredient you have sitting unused in your fridge, and find a delicious recipe to make for dinner!",
@@ -124,7 +124,7 @@ export const projects = [
     },
     {
         name: "Tech Blog",
-        deploy: "https://github.com/morgs999/Tech-Blog",
+        deploy: "Not currently deployed.",
         repo: "https://github.com/morgs999/Tech-Blog",
         photo: "gifs/techblog.gif",
         description: "An interactive blogging website that allows users to post blogs and comment on fellow blogs, with a login system locking out unauthorized users.",
@@ -139,7 +139,7 @@ export const projects = [
     },
     {
         name: "Stock Portfolio Generator",
-        deploy: "https://github.com/sheridan-python/assignment-7-portfolio-generator-morgs999",
+        deploy: "Not currently deployed.",
         repo: "https://github.com/sheridan-python/assignment-7-portfolio-generator-morgs999",
         photo: "gifs/stockportfolio.gif",
         description: "A purely Python application that generates a stock portfolio based on user input, using the IEX Trading API to pull real-time stock data.",
