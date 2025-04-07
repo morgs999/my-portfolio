@@ -49,7 +49,7 @@ export const projects = [
     },
     {
         name: "What's Up Doc",
-        deploy: "https://linkedin.com/in/morgandclarke/",
+        deploy: "https://whats-up-doc.onrender.com/",
         repo: "https://github.com/morgs999/Whats-Up-Doc",
         photo: "gifs/whatsupdoc.gif",
         description: "A full MERN stack application for an outpatient medical office, with user login authentication and admin functionality.",
