@@ -125,7 +125,7 @@ export default function Project({ project }) {
                 >
                     GitHub Repo
                 </Button>
-                <Button
+                {/* <Button
                     onClick={() => openPage(project.deploy)}
                     variant="contained"
                     startIcon={<RiExternalLinkFill />}
@@ -138,7 +138,7 @@ export default function Project({ project }) {
                     }}
                 >
                     Website
-                </Button>
+                </Button> */}
             </Box>
         </div>
     );

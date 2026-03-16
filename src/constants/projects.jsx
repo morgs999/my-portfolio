@@ -95,7 +95,7 @@ export const projects = [
     {
         name: "Leftover Lover",
         deploy: "No longer deployed.",
-        repo: "https://github.com/DamirFM/The-Leftover-Lover",
+        repo: "https://github.com/morgs999/recipe-finder",
         photo: "gifs/leftoverlover.gif",
         description: "The Leftover Lover web application allows you to input an ingredient you have sitting unused in your fridge, and find a delicious recipe to make for dinner!",
         tools: {
